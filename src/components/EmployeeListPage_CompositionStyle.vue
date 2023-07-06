@@ -38,33 +38,3 @@ export default {
   gap: 15px;
 }
 </style>
-
-<!-- <script>
-import { ref, onMounted } from "vue";
-import axios from "axios";
-
-export default {
-  setup() {
-    const users = ref([]);
-
-    const fetchData = () => {
-      axios
-        .get("https://reqres.in/api/users")
-        .then((response) => {
-          console.log("response => ", response)
-          users.value = response.data.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
-
-    onMounted(fetchData);
-
-    return {
-      users,
-    };
-  },
-};
-</script>
- -->
