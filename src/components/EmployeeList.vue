@@ -1,5 +1,5 @@
 <template>
-  <div class="user-card-container">
+  <div class="employee-card-container">
     <ProfileCard
       v-for="employee in displayedEmployees"
       :key="employee.id"
@@ -110,11 +110,19 @@ export default {
 </script>
 
 <style scoped>
-.user-card-container {
+.employee-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 15px;
-}
+} 
+/* .employee-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  overflow-x: hidden;
+} */
+
 
 .pagination-nav {
   display: flex;

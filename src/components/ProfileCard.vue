@@ -1,9 +1,9 @@
 <template>
-  <div class="user-card">
-    <div class="user-image">
+  <div class="employee-card">
+    <div class="employee-image">
       <img :src="employee.avatar" :alt="employee.name" srcset="" />
     </div>
-    <div class="user-details">
+    <div class="employee-details">
       <h3>{{ employee.first_name }} {{ employee.last_name }}</h3>
       <p><a :href="'mailto:' + employee.email">Contact</a></p>
     </div>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-.user-card {
+.employee-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,19 +31,19 @@ export default {
   background-color: #f1f0f2;
   border-radius: 10px;
   padding: 20px;
-  /* margin-bottom: 20px; */
+  
 }
 @media (min-width: 768px) {
 }
 
-.user-image img {
+.employee-image img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
   object-fit: cover;
 }
 
-.user-details {
+.employee-details {
   text-align: center;
   place-items: center;
 }

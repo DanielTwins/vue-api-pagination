@@ -2,7 +2,7 @@
   <main>
     <header class="header">
       <div class="bg-image__header"></div>
-      <div class="container">
+      <div class="header-wrapper">
         <div class="header-menu-bar">
           <img src="../assets/images/logo.png" class="logo-icon" />
         </div>
@@ -53,6 +53,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background: rgba(
@@ -63,10 +64,11 @@ export default {
   ); /* Adjust the opacity value to control the darkness */
 }
 
-.container {
+.header-wrapper {
   position: absolute;
   top: 0;
-  padding: 30px;
+  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -81,24 +83,24 @@ export default {
 
 .header {
   position: relative;
+  width: 100%;
 }
 .hero-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   color: #fff;
 }
 
 .hero-content h1 {
-  font-size: 56px;
+  font-size: 46px;
 }
 .hero-content h3 {
   font-weight: 400;
@@ -120,16 +122,24 @@ export default {
 .hero-button:hover {
   background-color: #5d42d6;
 }
-
 .main-content {
+  padding: 15px 9%;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
   margin: 80px 0;
+  width: 100%;
   padding: 0 30px;
+  overflow: hidden;
 }
 
 .main-content h3 {
   display: flex;
   place-content: center;
+  text-align: center;
   font-size: 40px;
   margin-bottom: 40px;
-}
+} 
 </style>
