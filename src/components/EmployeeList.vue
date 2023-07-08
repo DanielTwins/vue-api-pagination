@@ -12,9 +12,9 @@
     <button @click="previousPage" :disabled="currentPage === 1">
       Previous
     </button>
-    <div class="current-page">
-      <span>{{ currentPage }}</span>
-    </div>
+    <button class="current-page">
+      {{ currentPage }}
+    </button>
     <button @click="nextPage">Next</button>
   </div>
 </template>
@@ -59,7 +59,7 @@ export default {
       ...employeesPage2.value,
     ]);
 
-    // delay this console.log to first fetch (asynchronously) data through useFetch composable 
+    // delay this console.log to first fetch (asynchronously) data through useFetch composable
     // otherwise you get an empty arr
     setTimeout(() => {
       console.log("all employees => ", employees.value);
@@ -74,7 +74,7 @@ export default {
     // compute the currently displayed employees based on the current page
     const displayedEmployees = computed(() => {
       const startIndex = (currentPage.value - 1) * employeesPerPage; // (1 - 1) * 6 = 0
-      const endIndex = startIndex + employeesPerPage; // 0 + 6 = 6 
+      const endIndex = startIndex + employeesPerPage; // 0 + 6 = 6
       return employees.value.slice(startIndex, endIndex); // extract the start and end of array(0, 6)
     });
 
@@ -124,9 +124,17 @@ export default {
   margin: 2rem auto;
 }
 
-.current-page span{
-  background-color: rgb(201, 198, 198);
-  border-radius: 3px;
-  padding: 0 2px;
+.pagination-nav button {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.pagination-nav .current-page {
+  background-color: #5332ed;
+  color: white;
 }
 </style>
